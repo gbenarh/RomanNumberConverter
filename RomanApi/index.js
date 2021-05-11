@@ -42,13 +42,13 @@ const RomanConverter = (str) => {
     answer = 0;
 
   for (let i = size; i >= 0; i--) {
-    if (Value(str[i]) >= previous) {
-      answer += Value(str[i]);
-    } else {
-      answer -= Value(str[i]);
-    }
+    Value(str[i]) >= previous
+      ? (answer += Value(str[i]))
+      : (answer -= Value(str[i]));
+
     previous = Value(str[i]);
   }
+
   return answer;
 };
 
